@@ -1,0 +1,31 @@
+<html>
+<head>
+	<meta charset='UTF-8'>
+	<title>Embedded Messaging Example</title>
+	<link rel='stylesheet' href='https://orgfarm-46d1dced1a-dev-ed.develop.my.site.com/ESWWebChannelDeployment1752545962532/assets/css/bootstrap.min.css'>
+	<link rel='stylesheet' href='https://orgfarm-46d1dced1a-dev-ed.develop.my.site.com/ESWWebChannelDeployment1752545962532/assets/css/embedded-messaging.css'>
+</head>
+<body>
+	<!-- <div id='embedded-messaging-container'></div> -->
+</body>
+
+<script type='text/javascript'>
+	function initEmbeddedMessaging() {
+		try {
+			embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+
+			embeddedservice_bootstrap.init(
+				'00DgK000006HD0b',
+				'Web_Channel_Deployment',
+				'https://orgfarm-46d1dced1a-dev-ed.develop.my.site.com/ESWWebChannelDeployment1752545962532',
+				{
+					scrt2URL: 'https://orgfarm-46d1dced1a-dev-ed.develop.my.salesforce-scrt.com'
+				}
+			);
+		} catch (err) {
+			console.error('Error loading Embedded Messaging: ', err);
+		}
+	};
+</script>
+<script type='text/javascript' src='https://orgfarm-46d1dced1a-dev-ed.develop.my.site.com/ESWWebChannelDeployment1752545962532/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+</html>
