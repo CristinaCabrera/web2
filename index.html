@@ -12,8 +12,31 @@
 </head>
 <body>
 	<h1> INDEX PAGE </h1>
-	
+
+
 	<div id='embedded-messaging-container'>
+		<script type='text/javascript'>
+			function initEmbeddedMessaging() {
+				try {
+					embeddedservice_bootstrap.settings.language = 'en_US'; // For example, enter 'en' or 'en-US'
+		
+					embeddedservice_bootstrap.init(
+						'00DgL000001c7r7',
+						'WebCris',
+						'https://orgfarm-f447dea07b-dev-ed.develop.my.site.com/ESWWebCris1753312370827',
+						{
+							scrt2URL: 'https://orgfarm-f447dea07b-dev-ed.develop.my.salesforce-scrt.com'
+						}
+					);
+				} catch (err) {
+					console.error('Error loading Embedded Messaging: ', err);
+				}
+			};
+		</script>
+		<script type='text/javascript' src='https://orgfarm-f447dea07b-dev-ed.develop.my.site.com/ESWWebCris1753312370827/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
+	</div>
+	
+	<!-- <div id='embedded-messaging-container'>
 		<script type='text/javascript'>
 			function initEmbeddedMessaging() {
 				try {
@@ -33,6 +56,6 @@
 			};
 		</script>
 		<script type='text/javascript' src='https://orgfarm-46d1dced1a-dev-ed.develop.my.site.com/ESWWebChannelDeployment1752603111230/assets/js/bootstrap.min.js' onload='initEmbeddedMessaging()'></script>
-	</div>
+	</div>--> 
 </body>
 </html>
